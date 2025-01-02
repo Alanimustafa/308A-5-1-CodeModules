@@ -1,5 +1,5 @@
 import { mainHomeButton } from "./mainButton.js";
-import { theCalendarFunction } from "./theCalendar.js";
+
 
 // ToDo (body) | Has one main container 
 const todoBody = document.querySelector('body');
@@ -111,7 +111,7 @@ todoBody.setAttribute('class','todoBody');
           todoMainRight.setAttribute('class', "todoMainRight");
           todoMainRight.id ="todoMainRightEmpty";
           todoMainBottom.appendChild(todoMainRight);
-
+          export default todoMainRight          
     
             // DONE - Todo Operation | Container 1 | TOP | Greeting and Scheduel | Width: 100% - Height: 50% | Has (2) Containers | LEFT: The Agenda | RIGHT: Schedule 
             const mainRightTop = document.createElement('div');
@@ -312,9 +312,8 @@ todoBody.setAttribute('class','todoBody');
 
 // CALENDAR FUNCTION - Transferred to theCalendar.js
 
-
-// CONTACTS FUNCTION
- function theContactsFunction () {
+// CONTACTS FUNCTION - This function Can NOT be fransferred becuase it has DOM constants.
+  function theContactsFunction () {
   const contactsContainer = document.createElement('div');
   contactsContainer.setAttribute("class", "contactsContainer");
   todoMainRight.replaceWith(contactsContainer);
@@ -336,6 +335,7 @@ todoBody.setAttribute('class','todoBody');
   contactsContainer.appendChild(contacsSubContainer);
 
  };
+ 
 
 // WHITEBOARD FUNCTION
 function whiteBoardFunction () {
